@@ -14,13 +14,11 @@ const getJson = url => fetch(url).then(response => response.json());
 const transformTunes = R.pipe(
     // there are bugs in the data, ignore records where the tune id is not a number
     R.filter(tune => R.is(Number, tune.tune)),
-    R.map(tune => {
-        return {
-            id: tune.tune,
-            type: tune.type,
-            names: [tune.name],
-        };
-    }),
+    R.map(tune => ({
+        id: tune.tune,
+        type: tune.type,
+        names: [tune.name],
+    })),
     R.uniqBy(R.prop('id')),
     R.indexBy(R.prop('id'))
 );
@@ -30,13 +28,11 @@ const transformAliases = R.pipe(
     R.map(R.pluck('alias'))
 );
 
-const mergeTuneAndAliases = (id, tune, aliases) => {
-    return {
-        id,
-        type: tune.type,
-        names: R.concat(tune.names, aliases),
-    };
-};
+const mergeTuneAndAliases = (id, tune, aliases) => ({
+    id,
+    type: tune.type,
+    names: R.concat(tune.names, aliases),
+});
 
 function run() {
     Promise.all([urls.tunes, urls.aliases].map(getJson))
