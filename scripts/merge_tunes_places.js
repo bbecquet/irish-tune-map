@@ -47,6 +47,8 @@ const findMatchingTunes = (place, tunes) => {
     return R.filter(tune => placeMatchesTune(placeNames, tune))(tunes);
 };
 
+const hasNoTunes = R.compose(R.isEmpty, R.path(['properties', 'tunes']));
+
 function run() {
     const tunes = getJsonFile(files.tunes);
     const placesGeoJson = getJsonFile(files.places);
@@ -69,7 +71,7 @@ function run() {
         // find and add matching tunes to the places
         R.map(addTunes),
         // remove places with no associated tunes
-        R.reject(R.compose(R.isEmpty, R.path(['properties', 'tunes']))),
+        R.reject(hasNoTunes),
         // rebuild a GeoJSON FeatureCollection
         turf.featureCollection
     )(placesGeoJson);
