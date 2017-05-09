@@ -8,23 +8,25 @@ const nbTunes = R.compose(R.length, placeTunes);
 const tuneName = R.compose(R.head, R.prop('names'));
 const compareTune = R.comparator((a, b) => tuneName(a).localeCompare(tuneName(b)) < 0);
 
+const warmRed = '#A52A2A';
+
 const normalStyle = {
-    color: '#A52A2A',
-    fillColor: '#A52A2A',
+    color: warmRed,
+    fillColor: warmRed,
     opacity: 0.7,
     fillOpacity: 0.2,
 };
 
 const highlightedStyle = {
     color: 'white',
-    fillColor: '#A52A2A',
+    fillColor: warmRed,
     opacity: 1,
     fillOpacity: 1,
 };
 
 const hoverStyle = {
-    color: '#A52A2A',
-    fillColor: '#A52A2A',
+    color: warmRed,
+    fillColor: warmRed,
     opacity: 1,
     fillOpacity: 0.6,
 };

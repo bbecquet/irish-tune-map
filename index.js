@@ -16,23 +16,25 @@ var compareTune = R.comparator(function (a, b) {
     return tuneName(a).localeCompare(tuneName(b)) < 0;
 });
 
+var warmRed = '#A52A2A';
+
 var normalStyle = {
-    color: '#A52A2A',
-    fillColor: '#A52A2A',
+    color: warmRed,
+    fillColor: warmRed,
     opacity: 0.7,
     fillOpacity: 0.2
 };
 
 var highlightedStyle = {
     color: 'white',
-    fillColor: '#A52A2A',
+    fillColor: warmRed,
     opacity: 1,
     fillOpacity: 1
 };
 
 var hoverStyle = {
-    color: '#A52A2A',
-    fillColor: '#A52A2A',
+    color: warmRed,
+    fillColor: warmRed,
     opacity: 1,
     fillOpacity: 0.6
 };
