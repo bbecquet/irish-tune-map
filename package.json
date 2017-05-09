@@ -7,7 +7,9 @@
     "data:tunes": "node scripts/get_tunes.js",
     "data:places": "node scripts/get_places.js",
     "data:merge": "node scripts/merge_tunes_places.js",
-    "data:all": "npm run data:tunes && npm run data:places && npm run data:merge"
+    "data:all": "npm run data:tunes && npm run data:places && npm run data:merge",
+    "build": "babel src --out-dir .",
+    "build:watch": "babel src --out-dir . --watch"
   },
   "author": "Benjamin Becquet (benjamin@bbecquet.net)",
   "license": "ISC",
@@ -19,5 +21,8 @@
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.24.0"
+  },
+  "babel": {
+    "presets": ["es2015"]
   }
 }
