@@ -71,7 +71,7 @@ function run() {
         // remove places with no associated tunes
         R.reject(R.compose(R.isEmpty, R.path(['properties', 'tunes']))),
         // rebuild a GeoJSON FeatureCollection
-        R.assoc('features', R.__, { type: 'FeatureCollection' })
+        turf.featureCollection
     )(placesGeoJson);
 
     fs.writeFile(files.out, JSON.stringify(resultGeoJson, null, 2));

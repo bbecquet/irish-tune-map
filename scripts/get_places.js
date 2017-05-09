@@ -46,7 +46,7 @@ function run() {
         R.prop('features'),
         R.map(simplifyGeom),
         R.map(simplifyProps),
-        R.assoc('features', R.__, { type: 'FeatureCollection' })
+        turf.featureCollection
     ))
     .then(cleanPlaces => {
         fs.writeFile(outFile, JSON.stringify(cleanPlaces, null, 2));
