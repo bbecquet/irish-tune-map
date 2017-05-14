@@ -89,9 +89,8 @@ function init() {
         center: [53.6, -7.86],
         zoom: 7,
         layers: [
-            L.tileLayer('https://api.mapbox.com/styles/v1/bbecquet/cj02gbi88003x2snylweh6nkq/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiYmJlY3F1ZXQiLCJhIjoieGZqTzZsZyJ9.boUXwiILkBMs4SGBwQ1vWQ', {
-            // L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-                attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             })
         ],
         minZoom: 6,
