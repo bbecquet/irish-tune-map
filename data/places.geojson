@@ -3790,21 +3790,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/178623379",
-      "properties": {
-        "name": "Tiffin's Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.438068650000002,
-          54.2529385
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/179021410",
       "properties": {
         "name": "Bilberry Island",
@@ -4106,21 +4091,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/207634703",
-      "properties": {
-        "name": "Clooney",
-        "place": "village"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.869129749999999,
-          52.8633153
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/209528192",
       "properties": {
         "name": "Seymours Islands",
@@ -4236,21 +4206,6 @@
         "coordinates": [
           -9.81835695,
           51.639380349999996
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/231229702",
-      "properties": {
-        "name": "Inishmacgarth Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.042934800000001,
-          54.154119050000006
         ]
       }
     },
@@ -4762,21 +4717,6 @@
         "coordinates": [
           -9.08129925,
           53.359752099999994
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/308793258",
-      "properties": {
-        "name": "Willow Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.427493,
-          54.2520939
         ]
       }
     },
@@ -6526,21 +6466,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/4564225",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.410930950000001,
-          51.8962053
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/26224508",
       "properties": {
         "name": "Ballymacegan Island",
@@ -7076,21 +7001,6 @@
         "coordinates": [
           -10.195946150000001,
           51.6039385
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/333137484",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.33098085,
-          51.9291757
         ]
       }
     },
@@ -8225,291 +8135,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/404159710",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.3891852,
-          51.914143949999996
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404159718",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.3593556,
-          51.892478
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404160008",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.3995552,
-          51.913351649999996
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404160009",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.3826936,
-          51.88985855
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404163418",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.3179274,
-          51.929181
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404163423",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.296101400000001,
-          51.92089944999999
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404164295",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.29372465,
-          51.9127382
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404164724",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.298159949999999,
-          51.9108108
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404165268",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.3038131,
-          51.9080268
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404165269",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.309828750000001,
-          51.90599375
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404165483",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.31815,
-          51.90418605
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404165614",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.3283791,
-          51.901314
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404165842",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.34328515,
-          51.930882749999995
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404216268",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.35271515,
-          51.92422315
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404216545",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.33673455,
-          51.898880649999995
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404216737",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.34234605,
-          51.897490399999995
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404217272",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.358860700000001,
-          51.9215532
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404218681",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.38425395,
-          51.9133199
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/404218684",
-      "properties": {
-        "name": "Valentia Island",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -10.3721539,
-          51.91709855
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/459472235",
       "properties": {
         "name": "Ballymacegan Island",
@@ -9201,8 +8826,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.5954882,
-          51.6664293
+          -8.5955782,
+          51.666677
         ]
       }
     },
@@ -12054,8 +11679,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -7.885556,
-          52.515833
+          -7.8879351,
+          52.5167421
         ]
       }
     },
@@ -14449,8 +14074,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -7.3000001,
-          53.0322221
+          -7.3000591,
+          53.0340093
         ]
       }
     },
@@ -15022,22 +14647,6 @@
     },
     {
       "type": "Feature",
-      "id": "node/52247059",
-      "properties": {
-        "name": "Blarney",
-        "name:ga": "An Bhlarna",
-        "place": "town"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.566667,
-          51.933333
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "node/52247414",
       "properties": {
         "name": "Nohoval",
@@ -15593,8 +15202,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -7.137222,
-          52.526667
+          -7.1382466,
+          52.525169
         ]
       }
     },
@@ -21976,8 +21585,7 @@
       "type": "Feature",
       "id": "node/52268941",
       "properties": {
-        "name": "Valley",
-        "name:ga": "Tóin an tSeanbhaile",
+        "name": "Tóin an tSeanbhaile",
         "place": "village"
       },
       "geometry": {
@@ -31445,6 +31053,21 @@
     },
     {
       "type": "Feature",
+      "id": "node/4248446096",
+      "properties": {
+        "name": "Aghalee",
+        "place": "village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.2679269,
+          54.5205213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
       "id": "node/4263249257",
       "properties": {
         "name": "Bailliesmill",
@@ -31939,6 +31562,22 @@
         "coordinates": [
           -7.176451,
           55.0266097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4805912920",
+      "properties": {
+        "name": "Blarney",
+        "name:ga": "An Bhlarna",
+        "place": "town"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5666702,
+          51.9333535
         ]
       }
     },
