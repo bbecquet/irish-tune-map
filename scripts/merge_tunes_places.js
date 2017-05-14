@@ -40,11 +40,13 @@ const getPlaceNames = place => {
 };
 
 // there is a match if at least one name of the place matches the tune names
-const placeMatchesTune = (placeNames, tune) => placeNames.some(placeName => namesMatch(placeName, tune.namesMatchString));
+const tuneMatchesPlace = R.curry((placeNames, tune) =>
+    placeNames.some(placeName => namesMatch(placeName, tune.namesMatchString))
+);
 
 const findMatchingTunes = (place, tunes) => {
     const placeNames = getPlaceNames(place);
-    return R.filter(tune => placeMatchesTune(placeNames, tune))(tunes);
+    return R.filter(tuneMatchesPlace(placeNames))(tunes);
 };
 
 const hasNoTunes = R.compose(R.isEmpty, R.path(['properties', 'tunes']));
