@@ -4,6 +4,7 @@ body {
     font-family: Georgia, serif;
     height: 100%;
     display: flex;
+    flex-direction: column;
 }
 a, a:visited, a:active {
     color: #009933;
@@ -11,27 +12,41 @@ a, a:visited, a:active {
 a:hover {
     text-decoration: none;
 }
+
 #map {
-    height: 100%;
+    height: 60%;
     flex-grow: 1;
 }
-#map::after {
-    content: "";
-    height: 100%;
-    width: 4px;
-    background: linear-gradient(to right, transparent, rgba(0,0,0,0.2));
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-}
 #panel {
-    width: 400px;
-    height: 100%;
+    height: 40%;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
 }
+
+@media (min-width: 600px) {
+  body {
+    flex-direction: row;
+  }
+  #map {
+    height: 100%;
+  }
+  #map::after {
+      content: "";
+      height: 100%;
+      width: 4px;
+      background: linear-gradient(to right, transparent, rgba(0,0,0,0.2));
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1000;
+  }
+  #panel {
+    width: 400px;
+    height: 100%;
+  }
+}
+
 #results {
     padding: 15px 15px 60px;
     flex-grow: 1;
