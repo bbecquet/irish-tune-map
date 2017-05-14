@@ -29,7 +29,7 @@ const shouldIgnorePlace = place => !place.properties.name || R.contains(place.pr
 const getTuneMatchingString = tune => tune.names.join(' ; ');
 
 // the real matching rule is a simple regexp
-const namesMatch = (placeName, tuneName) => new RegExp(`${placeName}(?:$| |,)`).test(tuneName);
+const namesMatch = (placeName, tuneName) => new RegExp(`${placeName}(?:$| |,|')`).test(tuneName);
 
 const getPlaceNames = place => {
     const placeNames = place.properties.name.split('/');    // Only to manage LondonDerry/Derry
