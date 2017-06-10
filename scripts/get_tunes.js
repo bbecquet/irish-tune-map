@@ -13,7 +13,7 @@ const getJson = url => fetch(url).then(response => response.json());
 
 const transformTunes = R.pipe(
     // there are bugs in the data, ignore records where the tune id is not a number
-    R.filter(tune => R.is(Number, tune.tune)),
+    R.filter(tune => parseInt(tune.tune).toString() === tune.tune),
     R.map(tune => ({
         id: tune.tune,
         type: tune.type,

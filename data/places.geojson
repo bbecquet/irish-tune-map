@@ -3,38 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": "way/4550017",
-      "properties": {
-        "name": "Lamb Island",
-        "name:ga": "Oileán na nUan",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.0880811,
-          53.274845
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/4550061",
-      "properties": {
-        "name": "Dalkey Island",
-        "name:ga": "Oileán Dheilginse",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.08429575,
-          53.271881300000004
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/4554355",
       "properties": {
         "name": "Dinish Island",
@@ -1214,8 +1182,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -5.644749,
-          54.467309
+          -5.6453314,
+          54.4674998
         ]
       }
     },
@@ -1540,13 +1508,14 @@
       "id": "way/4558676",
       "properties": {
         "name": "Inishtrahull",
+        "name:ga": "Inis Trá Tholl",
         "place": "island"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -7.235416600000001,
-          55.432400900000005
+          -7.23380485,
+          55.432057150000006
         ]
       }
     },
@@ -2590,37 +2559,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/34679659",
-      "properties": {
-        "name": "The Muglins",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.075726550000001,
-          53.27549295
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "way/34679704",
-      "properties": {
-        "name": "Maiden Rock",
-        "name:ga": "Carraig na Maighdean",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.0917425000000005,
-          53.27791535
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/34752926",
       "properties": {
         "name": "Holy Island",
@@ -2629,8 +2567,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.450178,
-          52.91551015
+          -8.450304299999999,
+          52.91544415
         ]
       }
     },
@@ -2659,8 +2597,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.487006449999999,
-          52.907798150000005
+          -8.4869937,
+          52.9077952
         ]
       }
     },
@@ -2674,8 +2612,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.4613505,
-          52.910517150000004
+          -8.46165725,
+          52.91070335
         ]
       }
     },
@@ -2689,8 +2627,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.4377368,
-          52.9166848
+          -8.43801955,
+          52.91682475
         ]
       }
     },
@@ -2704,8 +2642,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.427959099999999,
-          52.919050049999996
+          -8.4281287,
+          52.9193567
         ]
       }
     },
@@ -2809,8 +2747,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.36100275,
-          52.92564005
+          -8.36123275,
+          52.9261382
         ]
       }
     },
@@ -2824,8 +2762,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.4609545,
-          52.917765849999995
+          -8.46103185,
+          52.9177554
         ]
       }
     },
@@ -3585,7 +3523,7 @@
         "type": "Point",
         "coordinates": [
           -8.49766605,
-          54.42243235
+          54.4226489
         ]
       }
     },
@@ -4872,21 +4810,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/329268171",
-      "properties": {
-        "name": "Clare Rock",
-        "place": "island"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -6.08881295,
-          53.2772245
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/333094312",
       "properties": {
         "name": "Wright's Island",
@@ -5698,22 +5621,6 @@
     },
     {
       "type": "Feature",
-      "id": "way/422818311",
-      "properties": {
-        "name": "Laughill",
-        "name:ga": "leAc-Coill",
-        "place": "village"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -8.8264328,
-          53.641834
-        ]
-      }
-    },
-    {
-      "type": "Feature",
       "id": "way/431466936",
       "properties": {
         "name": "Great Blasket Island",
@@ -5784,6 +5691,21 @@
         "coordinates": [
           -8.3032883,
           51.8427838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/498117041",
+      "properties": {
+        "name": "Long Rocks",
+        "place": "island"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.6224583,
+          54.4067531
         ]
       }
     },
@@ -9964,7 +9886,7 @@
       "type": "Feature",
       "id": "node/52222840",
       "properties": {
-        "name": "Ballyheige",
+        "name": "Ballyheigue",
         "name:ga": "Baile Uí Thaidhg",
         "place": "village"
       },
@@ -31578,6 +31500,21 @@
         "coordinates": [
           -8.5666702,
           51.9333535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4857549190",
+      "properties": {
+        "name": "Connors Island",
+        "place": "island"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5196287,
+          54.4198957
         ]
       }
     },
