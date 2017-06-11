@@ -2,10 +2,16 @@
 
 const getJson = url => fetch(url).then(response => response.json());
 
+const humanizeTuneName = R.ifElse(
+    R.endsWith(', The'),
+    R.compose(R.concat('The '), R.dropLast(5)),
+    R.identity
+);
+
 const placeName = R.path(['properties', 'name']);
 const placeTunes = R.compose(R.defaultTo([]), R.path(['properties', 'tunes']));
 const nbTunes = R.compose(R.length, placeTunes);
-const tuneName = R.compose(R.head, R.prop('names'));
+const tuneName = R.compose(humanizeTuneName, R.head, R.prop('names'));
 const compareTune = R.comparator((a, b) => tuneName(a).localeCompare(tuneName(b)) < 0);
 
 const warmRed = '#A52A2A';

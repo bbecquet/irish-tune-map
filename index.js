@@ -1,6 +1,6 @@
-/* globals fetch, L, R */
-
 'use strict';
+
+/* globals fetch, L, R */
 
 var getJson = function getJson(url) {
     return fetch(url).then(function (response) {
@@ -8,10 +8,12 @@ var getJson = function getJson(url) {
     });
 };
 
+var humanizeTuneName = R.ifElse(R.endsWith(', The'), R.compose(R.concat('The '), R.dropLast(5)), R.identity);
+
 var placeName = R.path(['properties', 'name']);
 var placeTunes = R.compose(R.defaultTo([]), R.path(['properties', 'tunes']));
 var nbTunes = R.compose(R.length, placeTunes);
-var tuneName = R.compose(R.head, R.prop('names'));
+var tuneName = R.compose(humanizeTuneName, R.head, R.prop('names'));
 var compareTune = R.comparator(function (a, b) {
     return tuneName(a).localeCompare(tuneName(b)) < 0;
 });
