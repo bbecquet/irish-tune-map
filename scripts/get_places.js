@@ -1,9 +1,9 @@
-const fs = require('fs');
-const R = require('ramda');
-const turf = require('turf');
-const query_overpass = require('query-overpass');
+const fs = require('fs')
+const R = require('ramda')
+const turf = require('turf')
+const query_overpass = require('query-overpass')
 
-const outFile= 'data/places.geojson';
+const outFile = 'data/places.geojson'
 
 const overpassQuery = `
 [out:json][timeout:60];
@@ -23,34 +23,36 @@ const overpassQuery = `
 out body;
 >;
 out skel qt;
-`;
+`
 
 // replaces polygon by its center
-const simplifyGeom = place => R.assoc('geometry', turf.center(place).geometry, place);
+const simplifyGeom = place => R.assoc('geometry', turf.center(place).geometry, place)
 
-const propsToKeep = ['name', 'name:ga', 'place'];
-const simplifyProps = R.evolve({ properties: R.compose(R.pick(propsToKeep), R.prop('tags')) });
+const propsToKeep = ['name', 'name:ga', 'place']
+const simplifyProps = R.evolve({
+  properties: R.compose(R.pick(propsToKeep), R.prop('tags')),
+})
 
 function queryOSM(query) {
-    return new Promise((resolve, reject) => {
-        query_overpass(query, (error, places) => {
-            if(error) { reject(error); }
-            else { resolve(places); }
-        });
-    });
+  return new Promise((resolve, reject) => {
+    query_overpass(query, (error, places) => {
+      if (error) {
+        reject(error)
+      } else {
+        resolve(places)
+      }
+    })
+  })
 }
 
 function run() {
-    queryOSM(overpassQuery)
-    .then(R.pipe(
-        R.prop('features'),
-        R.map(simplifyGeom),
-        R.map(simplifyProps),
-        turf.featureCollection
-    ))
+  queryOSM(overpassQuery)
+    .then(
+      R.pipe(R.prop('features'), R.map(simplifyGeom), R.map(simplifyProps), turf.featureCollection)
+    )
     .then(cleanPlaces => {
-        fs.writeFile(outFile, JSON.stringify(cleanPlaces, null, 2));
-    });
+      fs.writeFileSync(outFile, JSON.stringify(cleanPlaces, null, 2))
+    })
 }
 
-run();
+run()
