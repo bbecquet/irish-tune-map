@@ -23,6 +23,8 @@ var getMatchingTitle = function getMatchingTitle(tune, place) {
   }) || tune.names[0];
 };
 
+var highlightedMarker = null;
+
 var warmRed = '#A52A2A';
 
 var normalStyle = {
@@ -67,21 +69,29 @@ function displayTunes(place) {
   }), R.join(''))(place);
 
   document.getElementById('results').innerHTML = '<h2>' + placeName(place) + '</h2>' + tunesByType;
+  document.body.classList.add('hasResults');
+}
+
+function clearResults() {
+  if (highlightedMarker) {
+    highlightedMarker.setStyle(normalStyle);
+  }
+  document.getElementById('results').innerHTML = '';
+  document.body.classList.remove('hasResults');
 }
 
 function toGeoJsonLayer(places) {
-  var highlightedMarker = null;
-
   return L.geoJson(places, {
     pointToLayer: createPlaceMarker,
     onEachFeature: function onEachFeature(feature, layer) {
-      layer.on('click', function () {
+      layer.on('click', function (e) {
         displayTunes(feature);
         if (highlightedMarker) {
           highlightedMarker.setStyle(normalStyle);
         }
         highlightedMarker = layer;
         layer.setStyle(highlightedStyle);
+        L.DomEvent.stopPropagation(e);
       }).on('mouseover', function () {
         if (layer === highlightedMarker) {
           return;
@@ -108,7 +118,7 @@ function init() {
     })],
     minZoom: 6,
     maxBounds: L.latLngBounds([45, -15], [60, 0])
-  });
+  }).on('click', clearResults);
 
   getJson('data/tunesByPlaces.geojson').then(function (places) {
     map.addLayer(toGeoJsonLayer(places));

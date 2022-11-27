@@ -55,11 +55,16 @@ a:hover {
   }
 }
 
-#results {
+#panelInner {
     padding: 15px 15px 60px;
     flex-grow: 1;
     overflow: auto;
 }
+
+body.hasResults #intro {
+    display: none
+}
+
 #source {
     font-style: italic;
     text-align: right;

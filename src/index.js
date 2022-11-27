@@ -18,6 +18,8 @@ const getMatchingTitle = (tune, place) =>
     name => name.includes(place.properties.name) || name.includes(place.properties['name:ga'])
   ) || tune.names[0]
 
+let highlightedMarker = null
+
 const warmRed = '#A52A2A'
 
 const normalStyle = {
@@ -68,22 +70,30 @@ function displayTunes(place) {
   )(place)
 
   document.getElementById('results').innerHTML = `<h2>${placeName(place)}</h2>${tunesByType}`
+  document.body.classList.add('hasResults')
+}
+
+function clearResults() {
+  if (highlightedMarker) {
+    highlightedMarker.setStyle(normalStyle)
+  }
+  document.getElementById('results').innerHTML = ``
+  document.body.classList.remove('hasResults')
 }
 
 function toGeoJsonLayer(places) {
-  let highlightedMarker = null
-
   return L.geoJson(places, {
     pointToLayer: createPlaceMarker,
     onEachFeature: (feature, layer) => {
       layer
-        .on('click', () => {
+        .on('click', e => {
           displayTunes(feature)
           if (highlightedMarker) {
             highlightedMarker.setStyle(normalStyle)
           }
           highlightedMarker = layer
           layer.setStyle(highlightedStyle)
+          L.DomEvent.stopPropagation(e)
         })
         .on('mouseover', () => {
           if (layer === highlightedMarker) {
@@ -115,7 +125,7 @@ function init() {
     ],
     minZoom: 6,
     maxBounds: L.latLngBounds([45, -15], [60, 0]),
-  })
+  }).on('click', clearResults)
 
   getJson('data/tunesByPlaces.geojson').then(places => {
     map.addLayer(toGeoJsonLayer(places))
