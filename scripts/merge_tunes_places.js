@@ -23,6 +23,7 @@ const ignoreList = [
   'Crannog', // this is a common name for a small island
   'Inish', // it means island
   'Fahy',
+  'Glen',
 ]
 const shouldIgnorePlace = place =>
   !place.properties.name || R.contains(place.properties.name, ignoreList)
