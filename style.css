@@ -24,6 +24,14 @@ a:hover {
     flex-direction: column;
 }
 
+.placeMarker:focus {
+    outline: none;
+}
+
+/* .leaflet-tile-pane {
+    filter: sepia(0.25) hue-rotate(50deg);
+} */
+
 @media (min-width: 600px) {
   body {
     flex-direction: row;
