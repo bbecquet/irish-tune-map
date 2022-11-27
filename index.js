@@ -13,10 +13,15 @@ var humanizeTuneName = R.ifElse(R.endsWith(', The'), R.compose(R.concat('The '),
 var placeName = R.path(['properties', 'name']);
 var placeTunes = R.compose(R.defaultTo([]), R.path(['properties', 'tunes']));
 var nbTunes = R.compose(R.length, placeTunes);
-var tuneName = R.compose(humanizeTuneName, R.head, R.prop('names'));
+var tuneName = R.compose(humanizeTuneName, R.prop('matchingTitle'));
 var compareTune = R.comparator(function (a, b) {
   return tuneName(a).localeCompare(tuneName(b)) < 0;
 });
+var getMatchingTitle = function getMatchingTitle(tune, place) {
+  return tune.names.find(function (name) {
+    return name.includes(place.properties.name) || name.includes(place.properties['name:ga']);
+  }) || tune.names[0];
+};
 
 var warmRed = '#A52A2A';
 
@@ -49,12 +54,16 @@ var formatTuneListItem = function formatTuneListItem(tune) {
   return '<li><a href="https://thesession.org/tunes/' + tune.id + '">' + tuneName(tune) + '</a></li>';
 };
 
-var formatTuneList = R.pipe(R.sort(compareTune), R.map(formatTuneListItem), R.prepend('<ul>'), R.append('</ul>'), R.join(''));
+var formatTuneList = function formatTuneList(place, tunes) {
+  return R.pipe(R.map(function (tune) {
+    return R.assoc('matchingTitle', getMatchingTitle(tune, place), tune);
+  }), R.sort(compareTune), R.map(formatTuneListItem), R.prepend('<ul>'), R.append('</ul>'), R.join(''))(tunes);
+};
 
 function displayTunes(place) {
   var tunesByType = R.pipe(placeTunes, R.groupBy(R.prop('type')), R.toPairs, // => [type, tunes]
   R.sortBy(R.head), R.map(function (group) {
-    return R.concat('<h3>' + group[0] + '</h3>', formatTuneList(group[1]));
+    return R.concat('<h3>' + group[0] + '</h3>', formatTuneList(place, group[1]));
   }), R.join(''))(place);
 
   document.getElementById('results').innerHTML = '<h2>' + placeName(place) + '</h2>' + tunesByType;

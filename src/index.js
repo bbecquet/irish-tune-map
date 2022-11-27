@@ -11,8 +11,12 @@ const humanizeTuneName = R.ifElse(
 const placeName = R.path(['properties', 'name'])
 const placeTunes = R.compose(R.defaultTo([]), R.path(['properties', 'tunes']))
 const nbTunes = R.compose(R.length, placeTunes)
-const tuneName = R.compose(humanizeTuneName, R.head, R.prop('names'))
+const tuneName = R.compose(humanizeTuneName, R.prop('matchingTitle'))
 const compareTune = R.comparator((a, b) => tuneName(a).localeCompare(tuneName(b)) < 0)
+const getMatchingTitle = (tune, place) =>
+  tune.names.find(
+    name => name.includes(place.properties.name) || name.includes(place.properties['name:ga'])
+  ) || tune.names[0]
 
 const warmRed = '#A52A2A'
 
@@ -43,13 +47,15 @@ const createPlaceMarker = (place, latLng) =>
 const formatTuneListItem = tune =>
   `<li><a href="https://thesession.org/tunes/${tune.id}">${tuneName(tune)}</a></li>`
 
-const formatTuneList = R.pipe(
-  R.sort(compareTune),
-  R.map(formatTuneListItem),
-  R.prepend('<ul>'),
-  R.append('</ul>'),
-  R.join('')
-)
+const formatTuneList = (place, tunes) =>
+  R.pipe(
+    R.map(tune => R.assoc('matchingTitle', getMatchingTitle(tune, place), tune)),
+    R.sort(compareTune),
+    R.map(formatTuneListItem),
+    R.prepend('<ul>'),
+    R.append('</ul>'),
+    R.join('')
+  )(tunes)
 
 function displayTunes(place) {
   const tunesByType = R.pipe(
@@ -57,7 +63,7 @@ function displayTunes(place) {
     R.groupBy(R.prop('type')),
     R.toPairs, // => [type, tunes]
     R.sortBy(R.head),
-    R.map(group => R.concat(`<h3>${group[0]}</h3>`, formatTuneList(group[1]))),
+    R.map(group => R.concat(`<h3>${group[0]}</h3>`, formatTuneList(place, group[1]))),
     R.join('')
   )(place)
 
