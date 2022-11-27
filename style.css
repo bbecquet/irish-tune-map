@@ -65,6 +65,10 @@ body.hasResults #intro {
     display: none
 }
 
+p {
+    margin-bottom: 1em;
+}
+
 #source {
     font-style: italic;
     text-align: right;

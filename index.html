@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>☘️ Irish tune map 🎶</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
 		integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
@@ -20,7 +21,31 @@
 		<h1>☘️ Irish tune map ☘️</h1>
 		<div id="panelInner">
 			<div id="intro">
-				<p>Find tunes of Irish traditional music by the place they refer to.</p>
+				<p>Find tunes of Irish traditional music by the place they refer to in their title.</p>
+				<p>Example: if you click on <i>Galway</i>, you'll find tunes like:</p>
+				<ul>
+					<li><a href="https://thesession.org/tunes/249" target="_blank" rel="noopener nofollow">All the way to
+							Galway</a></li>
+					<li><a href="https://thesession.org/tunes/2572" target="_blank" rel="noopener nofollow">The Maids Of
+							Galway</a></li>
+					<li><a href="https://thesession.org/tunes/4437" target="_blank" rel="noopener nofollow">Roving Galway Boy</a>
+					</li>
+					<li>etc.</li>
+				</ul>
+				<p></p>
+				<p>Links go to the tune page on <a href="https://thesession.org">The Session</a>, a wonderful database of Irish
+					traditional music by <a href="https://adactio.com">Jeremy Keith</a>, which is also the datasource for this
+					map.</p>
+				<p></p>
+				<div style="font-size:0.8em;color:#555">
+					<p>Please note:</p>
+					<ul>
+						<li>Most traditional pieces of music have a lot of alternative names. I've considered all of them when
+							matching with places, as well as the place names in Irish Gaelic when available.</li>
+						<li>I've ignored place names which are also common names, but there are still some false matchings.
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div id="results"></div>
 		</div>
